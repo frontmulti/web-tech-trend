@@ -178,7 +178,7 @@ class App extends Component {
 ```
 
 ```jsx
-fcmToken : fEH8MLyMQI62weIjUO3xra:APA91bFTMKLJux_7z9Ri4We5TOhuOe36jxiZXhv7L3dVpKsTQTj8-NOjJwP1cfLre_lHHLVH2AGfY-YoJH8vhRWjS6Dx3W1_yaYuqKjBBhnMHtYJK-IRdATCkPRVHN8mZzqhEYSsSwEN
+fcmToken : XXX
 ```
 
 얻은 FCM Token을 입력하고 테스트 메시지 전송
