@@ -87,60 +87,6 @@ class App extends Component {
 }
 ```
 
-## 빌드 시 에러 발생
-
-```jsx
-error Failed to install the app. Make sure you have the Android development environment set up: https://reactnative.dev/docs/environment-setup.
-Error: Command failed: gradlew.bat app:installDebug -PreactNativeDevServerPort=8081
-
-FAILURE: Build completed with 2 failures.
-
-1: Task failed with an exception.
------------
-* Where:
-Build file 'D:\000.Code\000.HanaManaProject\02.DividendDiary\00.Code\DividendDiary\node_modules\@react-native-firebase\messaging\android\build.gradle' line: 83
-
-* What went wrong:
-A problem occurred evaluating project ':react-native-firebase_messaging'.
-> No signature of method: java.util.LinkedHashMap.isDefined() is applicable for argument types: (String) values: [messaging_auto_init_enabled]
-
-* Try:
-Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
-==============================================================================
-
-2: Task failed with an exception.
------------
-* What went wrong:
-A problem occurred configuring project ':react-native-firebase_messaging'.
-> com.android.builder.errors.EvalIssueException: compileSdkVersion is not specified. Please add it to build.gradle
-
-* Try:
-Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
-==============================================================================
-```
-
-firebase.json에 아래 코드 추가
-
-```jsx
-// <projectRoot>/firebase.json
-{
-  "react-native": {
-    "analytics_auto_collection_enabled": false,
-    "messaging_auto_init_enabled": false
-  }
-}
-```
-
-⇒ 실패
-
-버전 수정 : 최신 14.x.x 로 설치 됨. 기존 설치되어있는 app버전과 동일하게 설정
-
-```jsx
-"@react-native-firebase/app": "^10.8.1",
-"@react-native-firebase/messaging": "^10.8.1"
-```
-
-⇒ 빌드 성공!
 
 메시지 보내보기
 
